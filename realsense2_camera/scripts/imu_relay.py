@@ -22,6 +22,7 @@ def imu_relay(msg):
     new_imu.linear_acceleration.x = filter(msg.linear_acceleration.z)
     new_imu.linear_acceleration.y = filter(msg.linear_acceleration.x)
     new_imu.linear_acceleration.z = filter(msg.linear_acceleration.y)
+    # new_imu.linear_acceleration.z = 9.8
 
     new_imu.angular_velocity.x = filter(msg.angular_velocity.z)
     new_imu.angular_velocity.y = filter(msg.angular_velocity.x)
